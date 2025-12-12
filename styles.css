@@ -1,0 +1,711 @@
+/* Réinitialisation des marges */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style de base */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f9;
+}
+
+/* Bannière Devis Gratuit */
+.bandeau-devis {
+    background: #df863d;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.devis-gratuit {
+    text-decoration: none;
+}
+
+.bandeau a {
+    color: #6b2e14;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Style de la navigation */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    background: #FFFFFF;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #6b2e14;
+    text-decoration: none;
+}
+
+/* Sections */
+.section {
+    display: none;
+    /* Masquer toutes les sections par défaut */
+    padding: 20px;
+}
+
+/* Afficher la section ciblée par l'identifiant */
+.section:target {
+    display: block;
+}
+
+/* Afficher uniquement la section Accueil par défaut */
+body:not(:has(:target)) #accueil {
+    display: block;
+}
+
+/* Style pour les titres */
+h1,
+h2 {
+    color: #333;
+}
+
+/* Style pour la vidéo d'accueil */
+video {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Galerie d'images */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style général pour la section des prestations */
+.prestations {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Style pour le titre des prestations */
+.prestations h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Style pour la liste des prestations */
+.prestations ul {
+    list-style-type: none;
+    /* Supprime les puces par défaut */
+    padding: 0;
+    /* Supprime le padding par défaut */
+}
+
+/* Style pour chaque élément de la liste */
+.prestations li {
+    margin-bottom: 15px;
+    /* Espace entre les éléments de la liste */
+    background-color: #f9f9f9;
+    /* Fond clair pour chaque prestation */
+    border: 1px solid #ddd;
+    /* Bordure légère */
+    border-radius: 5px;
+    /* Coins arrondis */
+    padding: 15px;
+    /* Espacement intérieur */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Transition douce pour l'effet au survol */
+}
+
+/* Effet au survol des éléments de la liste */
+.prestations li:hover {
+    transform: translateY(-3px);
+    /* Légère élévation au survol */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    /* Ombre plus prononcée au survol */
+}
+
+/* Style pour les sous-listes */
+.prestations li ul {
+    list-style-type: circle;
+    /* Style de puce circulaire pour les sous-éléments */
+    margin-top: 10px;
+    /* Espace au-dessus des sous-listes */
+    padding-left: 20px;
+    /* Indentation pour les sous-listes */
+}
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    /* Limite la largeur du formulaire */
+    margin: 0 auto;
+    /* Centrer le formulaire */
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Pied de page */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Style général pour la section des prestations */
+.prestations {
+    background-color: #f4f4f9;
+    /* Couleur de fond claire */
+    padding: 30px;
+    /* Espacement intérieur */
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Ombre légère */
+    margin: 20px 0;
+    /* Espacement vertical autour de la section */
+}
+
+/* Style pour le titre des prestations */
+.prestations h2 {
+    color: #333;
+    /* Couleur du texte */
+    text-align: center;
+    /* Centrer le titre */
+    font-size: 2em;
+    /* Taille de police */
+    margin-bottom: 20px;
+    /* Espace sous le titre */
+}
+
+/* Style pour chaque élément de la liste */
+.prestations li {
+    margin-bottom: 20px;
+    /* Espace entre les éléments de la liste */
+    background-color: #ffffff;
+    /* Fond blanc pour chaque prestation */
+    border: 1px solid #ddd;
+    /* Bordure légère */
+    border-radius: 5px;
+    /* Coins arrondis */
+    padding: 20px;
+    /* Espacement intérieur */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Transition douce pour l'effet au survol */
+}
+
+/* Titre de chaque prestation */
+.prestations li h3 {
+    color: #6b2e14;
+    /* Couleur pour les titres de prestations */
+    margin-bottom: 10px;
+    /* Espace sous le titre */
+}
+
+/* Effet au survol des éléments de la liste */
+.prestations li:hover {
+    transform: translateY(-3px);
+    /* Légère élévation au survol */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    /* Ombre plus prononcée au survol */
+}
+
+/* Style pour les sous-listes */
+.prestations li ul {
+    list-style-type: circle;
+    /* Style de puce circulaire pour les sous-éléments */
+    margin-top: 10px;
+    /* Espace au-dessus des sous-listes */
+    padding-left: 20px;
+    /* Indentation pour les sous-listes */
+}
+
+/* Style général pour la section des prestations */
+.prestations {
+    background-color: #f9f9f9;
+    /* Couleur de fond claire */
+    padding: 40px;
+    /* Espacement intérieur */
+    border-radius: 10px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Ombre légère */
+    margin: 20px 0;
+    /* Espacement vertical autour de la section */
+}
+
+/* Style pour le titre des prestations */
+.prestations h2 {
+    color: #333;
+    /* Couleur du texte */
+    text-align: center;
+    /* Centrer le titre */
+    font-size: 2.5em;
+    /* Taille de police */
+    margin-bottom: 30px;
+    /* Espace sous le titre */
+}
+
+/* Conteneur pour les prestations */
+.prestations-container {
+    display: flex;
+    /* Affichage flexible */
+    flex-wrap: wrap;
+    /* Permet le passage à la ligne */
+    justify-content: space-around;
+    /* Espace autour des éléments */
+}
+
+/* Style pour chaque prestation */
+.prestation {
+    background-color: #fff;
+    /* Fond blanc pour chaque prestation */
+    border: 1px solid #ddd;
+    /* Bordure légère */
+    border-radius: 8px;
+    /* Coins arrondis */
+    padding: 20px;
+    /* Espacement intérieur */
+    margin: 15px;
+    /* Espacement entre les pavés */
+    flex: 1 1 300px;
+    /* Flexibilité de la taille des pavés */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Transition douce pour l'effet au survol */
+    position: relative;
+    /* Position relative pour l'effet */
+}
+
+/* Titre de chaque prestation */
+.prestation h3 {
+    color: #6b2e14;
+    /* Couleur pour les titres de prestations */
+    font-size: 1.8em;
+    /* Taille de police pour le titre */
+    margin-bottom: 10px;
+    /* Espace sous le titre */
+}
+
+/* Effet au survol des éléments de la prestation */
+.prestation:hover {
+    transform: translateY(-5px);
+    /* Légère élévation au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    /* Ombre plus prononcée au survol */
+}
+
+/* Style pour les sous-listes */
+.prestation ul {
+    list-style-type: disc;
+    /* Style de puce par défaut */
+    margin-top: 10px;
+    /* Espace au-dessus des sous-listes */
+    padding-left: 20px;
+    /* Indentation pour les sous-listes */
+}
+
+.gallery img {
+    width: 400px;
+    /* Ajuste la taille en fonction de ce qui convient */
+    height: 350px;
+    /* Ajuste la taille en fonction de ce qui convient */
+    object-fit: cover;
+    /* Pour que l'image remplisse bien l'espace */
+}
+
+.nos-realisations-texte {
+    text-align: center;
+    font-size: 1.2em;
+    /* Ajuste la taille du texte selon tes préférences */
+    margin: 20px auto;
+    width: 100%;
+    /* Assure que l'élément prend toute la largeur de son conteneur */
+    display: block;
+    /* Garde le texte en bloc pour que text-align fonctionne */
+}
+
+.nos-realisations-titre {
+    text-align: center;
+    font-size: 2em;
+    /* Ajuste la taille selon tes préférences */
+    margin-top: 20px;
+    /* Ajuste l'espacement au besoin */
+}
+
+.bandeau-existant {
+    display: flex;
+    /* Utilise Flexbox pour l'alignement */
+    justify-content: space-between;
+    /* Espace entre les éléments */
+    align-items: center;
+    /* Centre verticalement le contenu */
+    padding: 20px;
+    background-color: #6b2e14;
+    /* Couleur du bandeau */
+    color: #6b2e14;
+}
+
+.bandeau-existant {
+    position: relative;
+    /* Nécessaire pour le positionnement absolu du bouton */
+    padding: 20px;
+    background-color: #6b2e14;
+    /* Couleur du bandeau */
+    color: #6b2e14;
+}
+
+.bouton-appel {
+    background-color: #7a3e3e;
+    /* Couleur du bouton */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* Arrondir les coins */
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    /* Permet de positionner le bouton par rapport au bandeau */
+    top: 10px;
+    /* Ajuste cette valeur pour le placer plus haut ou plus bas */
+    right: 20px;
+    /* Positionne le bouton à droite */
+}
+
+.bouton-appel:hover {
+    background-color: #f46969;
+    /* Couleur du bouton au survol */
+}
+
+
+
+.image .video-background {
+    position: fixed;
+    /* Positionne la vidéo de manière fixe */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Prend toute la largeur de l'écran */
+    height: 100%;
+    /* Prend toute la hauteur de l'écran */
+    overflow: hidden;
+    /* Cache les débordements */
+    z-index: -1;
+    /* Met la vidéo derrière le contenu */
+}
+
+.video-background video {
+    min-width: 100%;
+    /* Assure que la vidéo couvre toute la largeur */
+    min-height: 100%;
+    /* Assure que la vidéo couvre toute la hauteur */
+    width: auto;
+    /* Pour conserver les proportions */
+    height: auto;
+    /* Pour conserver les proportions */
+    position: absolute;
+    /* Permet de positionner la vidéo */
+    top: 50%;
+    /* Centre la vidéo verticalement */
+    left: 50%;
+    /* Centre la vidéo horizontalement */
+    transform: translate(-50%, -50%);
+    /* Ajuste pour que la vidéo soit centrée */
+}
+
+.contenu-principal {
+    position: relative;
+    /* Nécessaire pour que le contenu soit au-dessus de la vidéo */
+    z-index: 1;
+    /* Assure que le contenu est au-dessus de la vidéo */
+    color: white;
+    /* Ajuste la couleur du texte selon le besoin */
+}
+
+.video-background {
+    position: fixed;
+    /* Positionne la vidéo de manière fixe */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Met la vidéo derrière le contenu */
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: absolute;
+    /* Permet de positionner l'overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Couleur blanche avec transparence */
+    /* Ajuste l'opacité pour éclaircir (0.5 ici, à modifier selon ton besoin) */
+    z-index: 1;
+    /* Met l'overlay au-dessus de la vidéo */
+}
+
+.contenu-principal {
+    position: relative;
+    /* Nécessaire pour que le contenu soit au-dessus de la vidéo */
+    z-index: 2;
+    /* Assure que le contenu est au-dessus de l'overlay */
+    color: black;
+    /* Ajuste la couleur du texte selon le besoin */
+}
+
+body {
+    font-size: 20px;
+    /* Ajuste la taille de la police selon tes besoins */
+}
+
+.contenu-principal h1 {
+    font-size: 2.5em;
+    /* Augmente la taille du titre */
+}
+
+.contenu-principal p {
+    font-size: 1.2em;
+    /* Ajuste la taille des paragraphes */
+}
+
+header {
+    position: relative;
+    /* Pour que le logo soit positionné relativement au header */
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    /* Ajustez cette valeur pour le positionner verticalement */
+    left: 10px;
+    /* Ajustez cette valeur pour le positionner horizontalement */
+    z-index: 10;
+    /* Assure que le logo reste au-dessus des deux bandeaux */
+}
+
+#logo {
+    width: 170px;
+    /* Ajustez la largeur selon vos préférences */
+    height: auto;
+    /* Conserve les proportions */
+}
+
+/* Espacement dans les bandeaux pour éviter le chevauchement du contenu */
+.bandeau-onglets,
+.bandeau-devis {
+    padding-left: 100px;
+    /* Laisse de l’espace pour le logo */
+    text-decoration: none;
+
+
+
+
+
+    /* Section Contact */
+    .contact-section {
+        background-color: #f8f9fa;
+        /* Couleur de fond légère */
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+        color: #6b2e14;
+        margin-bottom: 10px;
+    }
+
+    .contact-section p {
+        font-size: 1.1em;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    /* Conteneur pour aligner les informations et le formulaire */
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    /* Informations de contact */
+    .contact-info {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        font-size: 1.1em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .info-item i {
+        font-size: 1.5em;
+        color: #007bff;
+        margin-right: 10px;
+    }
+
+    /* Formulaire de contact */
+    .contact-form {
+        flex: 1;
+        max-width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .contact-form label {
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    .contact-form button {
+        background-color: #6b2e14;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+        background-color: #6b2e14;
+    }
+
+}
+
+.site-footer {
+    margin-top: 40px;
+    padding: 22px 14px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+}
+
+.site-footer a {
+    color: #e6e6e6;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.sep {
+    margin: 0 8px;
+    color: #aaa;
+}
+
+.footer-obligations {
+    margin: 12px auto 10px;
+    max-width: 900px;
+    text-align: left;
+}
+
+.footer-obligations ul {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.6;
+    color: #f2f2f2;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #d6d6d6;
+}
+
+.footer-credit {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #bbb;
+    opacity: 0.7;
+}
+
+.footer-phone {
+    white-space: nowrap;
+}
